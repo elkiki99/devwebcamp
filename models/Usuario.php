@@ -1,7 +1,6 @@
 <?php
 
 namespace Model;
-
 class Usuario extends ActiveRecord {
     protected static $tabla = 'usuarios';
     protected static $columnasDB = ['id', 'nombre', 'apellido', 'email', 'password', 'confirmado', 'token', 'admin'];
@@ -120,7 +119,7 @@ class Usuario extends ActiveRecord {
     }
 
     // Generar un Token
-    public function crearToken() : void {
-        $this->token = uniqid();
+    public function crearToken() {
+        $this->token = uniqid();   
     }
 }
